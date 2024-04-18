@@ -1,0 +1,30 @@
+﻿<Window x:Class="Avia1.TicketViewer" Background="CornflowerBlue"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Avia1"
+        mc:Ignorable="d"
+        Title="Ticket Viewer" Height="450" Width="1091">
+    <Grid Margin="0,0,10,0">
+        <DataGrid x:Name="ticketViewerDataGrid" AutoGenerateColumns="False" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,36,0,0" Height="301" Width="930">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Місце призначення" Binding="{Binding Destination}" />
+                <DataGridTextColumn Header="Тип подорожі" Binding="{Binding TripType}" />
+                <DataGridTextColumn Header="Клас" Binding="{Binding Class}" />
+                <DataGridTextColumn Header="І'мя" Binding="{Binding FullName}" />
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" />
+                <DataGridTextColumn Header="Час замовлення" Binding="{Binding OrderTime}" />
+                <DataGridTextColumn Header="Статус" Binding="{Binding Status}" />
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Відміна" Click="CancelTicketButton_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Back" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,355,0,0" Click="BackButton_Click" Background="White" Foreground="CornflowerBlue" Height="28" Width="86"/>
+    </Grid>
+</Window>

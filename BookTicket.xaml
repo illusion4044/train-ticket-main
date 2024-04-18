@@ -1,0 +1,37 @@
+﻿<Window x:Class="Avia1.BookTicket"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Book Ticket" Height="300" Width="400">
+    <Canvas Background="CornflowerBlue">
+        <Label x:Name="destinationLabel" Foreground="White" Content="Місце призначення" Canvas.Left="20" Canvas.Top="20"/>
+        <ComboBox x:Name="destinationComboBox" Canvas.Left="176" Foreground="White" Canvas.Top="22" Width="158" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <ComboBoxItem x:Name="Kyiv" Foreground="Black" Content="Київ"/>
+            <ComboBoxItem x:Name="Lviv" Foreground="Black" Content="Львів"/>
+            <ComboBoxItem x:Name="Kharkiv" Foreground="Black" Content="Харків"/>
+            <ComboBoxItem x:Name="Odesa" Foreground="Black" Content="Одеса"/>
+            <ComboBoxItem x:Name="BilaTserkva" Foreground="Black" Content="Біла Церква"/>
+        </ComboBox>
+
+        <Label x:Name="tripTypeLabel" Foreground="White" Content="Тип подорожі" Canvas.Left="20" Canvas.Top="50"/>
+        <ComboBox x:Name="tripTypeComboBox" Canvas.Left="176" Canvas.Top="54" Foreground="White" Width="158" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <ComboBoxItem x:Name="OneWay" Foreground="Black" Content="One Way"/>
+            <ComboBoxItem x:Name="Return" Foreground="Black" Content="Return"/>
+        </ComboBox>
+
+        <Label x:Name="classLabel" Foreground="White" Content="Клас" Canvas.Left="20" Canvas.Top="80"/>
+        <ComboBox x:Name="classComboBox" Canvas.Left="176" Canvas.Top="82" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" Width="158">
+            <ComboBoxItem x:Name="EconomClass" Foreground="Black" Content="Економ клас"/>
+            <ComboBoxItem x:Name="StandartClass" Foreground="Black" Content="Стандарт клас"/>
+            <ComboBoxItem x:Name="BusinessClass" Foreground="Black" Content="Бізнес клас"/>
+        </ComboBox>
+
+        <Label x:Name="nameLabel" Foreground="White" Content="Ім'я" Canvas.Left="20" Canvas.Top="110"/>
+        <TextBox x:Name="fullNameTextBox" Canvas.Left="176" Foreground="White" Canvas.Top="114" HorizontalAlignment="Left" VerticalAlignment="Center" Width="158"/>
+
+        <Label Foreground="White" Content="Email" Canvas.Left="20" Canvas.Top="140"/>
+        <TextBox x:Name="emailTextBox" Canvas.Left="176"  Foreground="White" Canvas.Top="144" HorizontalAlignment="Left" VerticalAlignment="Center" Width="158"/>
+
+        <Button x:Name="bookTicketbutton" Content="Забронювати квиток" Click="BookTicket_Click" Foreground="White" Width="176" Background="#FF3160B5" Canvas.Left="178" Canvas.Top="175" Height="37" BorderBrush="#FF3160B5" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="changeLangbutton" Content="Змінити мову" Click="ChangeLanguage_Click" Foreground="White" Width="127" Background="#FF3160B5" Canvas.Left="23" Canvas.Top="175" HorizontalAlignment="Left" VerticalAlignment="Center" Height="37" BorderBrush="#FF3160B5"/>
+    </Canvas>
+</Window>
